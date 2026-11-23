@@ -1,5 +1,3 @@
-# Applied-Hyperspectral-Imaging
-Hyperspectral imaging, spectral material identification sing Specim imaging systems
 
 # Applied Hyperspectral Imaging and Spectral Analysis
 
@@ -60,9 +58,9 @@ PCA, band selection and K-means clustering were also evaluated.
 <th>Segmentation Result</th>
 </tr>
 <tr>
-<td><img src="result/green%20material%20segmentation/rgb.png" width="300"></td>
-<td><img src="result/green%20material%20segmentation/spectrum.png" width="300"></td>
-<td><img src="result/green%20material%20segmentation/result.png" width="300"></td>
+<td><img src="result/green%20material%20segmentation/rgbGreenMaterial.png" width="300"></td>
+<td><img src="result/green%20material%20segmentation/spectrumGreenMaterial.png" width="300"></td>
+<td><img src="result/green%20material%20segmentation/resultGreenMaterial.png" width="300"></td>
 </tr>
 </table>
 
