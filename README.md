@@ -58,9 +58,9 @@ PCA, band selection and K-means clustering were also evaluated.
 <th>Segmentation Result</th>
 </tr>
 <tr>
-<td><img src="result/green%20material%20segmentation/rgbGreenMaterial.png" width="300"></td>
-<td><img src="result/green%20material%20segmentation/spectrumGreenMaterial.png" width="300"></td>
-<td><img src="result/green%20material%20segmentation/resultGreenMaterial.png" width="300"></td>
+<td><img src="result/green%20material%20segmentation/rgbGreenMaterial..png" width=""></td>
+<td><img src="result/green%20material%20segmentation/spectrumGreenMaterial..png" width=""></td>
+<td><img src="result/green%20material%20segmentation/resultGreenMaterial.png" width=""></td>
 </tr>
 </table>
 
