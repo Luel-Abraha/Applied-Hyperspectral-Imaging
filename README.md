@@ -327,63 +327,156 @@ spectral material discrimination and wavelength optimization
 rather than independently validated chemical identification
 or quantitative classification accuracy.
 
-## 4. Plastic Identification and Spectral Unmixing
+## 4. Plastic Polymer Identification and Spectral Unmixing
 
 ### Objective
 
-Investigate the spectral and spatial differentiation of
-plastic materials using hyperspectral imaging and laboratory
-transmittance measurements.
+Investigate the potential of hyperspectral imaging to
+identify and differentiate plastic polymers that exhibit
+similar visual appearances in conventional RGB images.
 
 ### Methodology
 
-Representative spectral endmembers were extracted from
-selected plastic samples.
+Visible and infrared hyperspectral measurements were used
+to investigate the spectral characteristics of different
+plastic samples.
 
-Non-negative least squares (NNLS) spectral unmixing was
-applied to estimate the contribution of each endmember
-at individual image pixels.
+The analysis involved:
 
-Hierarchical clustering was also performed using laboratory
-transmittance measurements and corresponding spectral
-imaging signatures.
+- White and dark reference correction.
+- Extraction of representative plastic spectral signatures.
+- First-order spectral derivative computation.
+- Spectral normalization.
+- Selection of representative material endmembers.
+- Spectral unmixing using Non-Negative Least Squares (NNLS).
+- Generation of material-specific abundance maps.
 
-### Reference Spectra and Plastic Samples
+### Experimental Results
 
-<!-- Insert plastic sample image and endmember spectra -->
+<table>
+  <tr>
+    <th>Conventional RGB Visualization</th>
+    <th>Infrared Plastic Spectral Signatures</th>
+  </tr>
+  <tr>
+    <td>
+      <img src="result/plastic/RGBplastic.png" width="450">
+    </td>
+    <td>
+      <img src="result/plastic/spectraplastic.png" width="450">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <b>Figure 1:</b> Conventional RGB appearance and
+      normalized first-order infrared spectral derivatives
+      of different plastic samples.
+    </td>
+  </tr>
+</table>
 
-### Spectral Clustering
+### Spectral Analysis and Interpretation
 
-<!-- Insert plastic dendrogram -->
+#### Conventional RGB Imaging
 
-### Spectral Unmixing Results
+Most plastic samples appear transparent or exhibit similar
+visual characteristics in the conventional RGB image.
 
-<!-- Insert plastic abundance maps -->
+Despite differences in their material composition, their
+similar colour and transparency make reliable polymer
+identification challenging using RGB imaging alone.
+
+#### Infrared Spectral Characteristics
+
+The normalized first-order derivative spectra reveal
+distinct wavelength-dependent characteristics across
+approximately 900–2500 nm.
+
+Pronounced spectral differences are observed in several
+wavelength regions, particularly:
+
+| Spectral region | Observed characteristics |
+|---|---|
+| 900–1500 nm | Relatively limited spectral variation |
+| 1600–1800 nm | Distinct derivative peaks and troughs |
+| 2000–2300 nm | Pronounced differences between plastic signatures |
+| 2300–2500 nm | Additional spectral variation and potential discrimination features |
+
+These differences provide useful spectral information for
+distinguishing plastic materials that are difficult to
+differentiate using conventional RGB imaging.
+
+First-order derivative preprocessing helps emphasize
+spectral features and reduce baseline variations, while
+normalization facilitates comparison between material
+signatures.
+
+### Plastic Identification Using Spectral Unmixing
+
+Non-Negative Least Squares (NNLS) spectral unmixing was
+applied to estimate the contribution of selected reference
+material signatures at individual image pixels.
+
+The resulting abundance maps represent seven plastic
+reference signatures and a background component.
+
+<p align="center">
+  <img src="result/plastic/RGB4plastic.png" width="100%">
+</p>
+
+<p align="center">
+  <b>Figure 2:</b> Spectral unmixing results showing the
+  RGB reference image and material-specific abundance maps
+  for plastic_01, plastic_02, plastic_04, plastic_05,
+  plastic_06, plastic_07_1, plastic_07_2 and background.
+</p>
 
 ### Result Analysis
 
-Different plastic samples exhibit distinct spectral
-characteristics that support their differentiation.
+The spectral abundance maps reveal the spatial distribution
+of different reference material signatures across the
+plastic samples.
 
-The spectral abundance maps visualize the spatial
-distribution of individual reference materials.
+Several reference signatures produce localized responses
+corresponding to specific plastic objects, demonstrating
+the potential of infrared spectral information for
+material discrimination.
 
-Hierarchical clustering provides additional information
-about spectral similarities and groupings among the samples.
+Unlike conventional RGB imaging, spectral unmixing enables
+the differentiation of visually similar plastic samples
+based on their wavelength-dependent characteristics.
 
-Together, these methods demonstrate the potential of
-hyperspectral imaging for plastic material identification.
+Some abundance maps exhibit overlapping responses and
+background contributions, indicating that further
+endmember refinement and preprocessing could improve
+material discrimination.
+
+### Key Findings
+
+- Conventional RGB imaging provides limited information
+  for differentiating visually similar plastic polymers.
+- Infrared spectral imaging reveals material-dependent
+  spectral characteristics.
+- First-order derivatives and normalization enhance
+  spectral feature comparison.
+- NNLS spectral unmixing provides spatially resolved
+  estimates of reference material contributions.
+- Hyperspectral imaging demonstrates potential for
+  automated plastic identification and sorting.
 
 ### Potential Industrial Applications
 
-- Plastic sorting
-- Recycling and waste management
-- Polymer identification
-- Industrial quality control
-- Automated material inspection
+- Automated plastic sorting and recycling.
+- Polymer material identification.
+- Waste stream characterization.
+- Detection of unwanted materials in recycling processes.
+- Industrial material inspection.
+- Hyperspectral machine vision for circular economy applications.
 
----
-
+**Experimental scope:** These results demonstrate laboratory-scale
+plastic material discrimination using reference spectral
+signatures. Quantitative polymer identification accuracy
+and industrial sorting performance require further validation.
 ## 5. Plant Species Segmentation
 
 ### Objective
