@@ -175,61 +175,136 @@ RGB-based identification.
 - Recycling and waste management.
 - Spectral machine vision.
 
-## 3. Medical Powder Analysis
+## 3. Medical Powder Identification 
 
 ### Objective
 
-Investigate SWIR spectral characteristics of different
-medical powder samples and identify wavelength combinations
-that improve their visual discrimination.
+Investigate the spectral characteristics of different medical
+powder samples and identify informative wavelength combinations
+for enhanced material discrimination using visible and
+short-wave infrared (SWIR) hyperspectral imaging.
 
 ### Methodology
 
-White and dark corrected infrared hyperspectral data were
-analysed to identify spectrally informative wavelength regions.
+Nine representative sample patches were selected to investigate
+their wavelength-dependent reflectance characteristics.
 
-Three SWIR regions were investigated:
+Following white and dark reference correction, the spectral
+analysis involved:
 
-| Spectral region | Wavelength |
+- Extraction of visible and SWIR reflectance signatures.
+- Spectral smoothing and comparison of powder samples.
+- Identification of spectrally informative wavelength regions.
+- Automated evaluation of wavelength combinations.
+- Variance-based selection of false-colour RGB representations.
+
+### Experimental Results
+
+<table>
+  <tr>
+    <th>Visible RGB and Selected Samples</th>
+    <th>Visible Reflectance Spectra</th>
+  </tr>
+  <tr>
+    <td>
+      <img src="result/medical%20powder/RGB_vismedicalpowder.png" width="450">
+    </td>
+    <td>
+      <img src="result/medical%20powder/rgbspectrumvis.png" width="450">
+    </td>
+  </tr>
+  <tr>
+    <th>SWIR Spectral Signatures</th>
+    <th>SWIR False-Colour Visualization</th>
+  </tr>
+  <tr>
+    <td>
+      <img src="result/medical%20powder/SWIRspectrum.png" width="450">
+    </td>
+    <td>
+      <img src="result/medical%20powder/SWIRresult.png" width="450">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <b>Figure:</b> Comparison of visible and SWIR spectral
+      characteristics and wavelength-based enhancement of
+      medical powder samples.
+    </td>
+  </tr>
+</table>
+
+### Spectral Analysis and Interpretation
+
+#### Visible Spectral Region (400–700 nm)
+
+The conventional RGB image shows several powder samples with
+similar white, cream and pale-yellow appearances, making their
+visual differentiation challenging.
+
+The visible reflectance curves reveal differences in spectral
+intensity and shape. However, several sample signatures overlap
+considerably, particularly at longer visible wavelengths.
+
+#### SWIR Spectral Region (1000–2500 nm)
+
+The SWIR measurements reveal substantially greater spectral
+variation among the selected samples.
+
+Several samples exhibit pronounced reflectance minima around
+1200, 1450 and 1950 nm, while others maintain relatively high
+reflectance across broader wavelength intervals.
+
+These differences provide additional information for material
+discrimination that is less apparent in conventional visible
+imaging.
+
+#### Spectral Band Selection
+
+The analysis investigated three informative SWIR regions:
+
+| Spectral region | Wavelength range |
 |---|---|
 | Region 1 | 1450–1850 nm |
 | Region 2 | 2000–2200 nm |
 | Region 3 | Above 2200 nm |
 
-RGB previews were generated automatically by evaluating
-different wavelength combinations.
+Different wavelength combinations were evaluated to enhance
+the contrast between powder samples.
 
-A variance-based criterion was used to select a combination
-that enhanced colour contrast between powder samples.
+The displayed false-colour result uses the following
+wavelength combination:
 
-### Results
+| RGB channel | Selected wavelength |
+|---|---:|
+| Red | 1301 nm |
+| Green | 1900 nm |
+| Blue | 2102 nm |
 
-<!-- Insert visible and infrared reference images -->
+The resulting SWIR visualization reveals distinct colour
+contrasts between powder regions that appear visually similar
+in the conventional RGB image.
 
-<!-- Insert spectral reflectance curves of powder samples -->
+### Key Findings
 
-<!-- Insert optimized RGB visualization -->
-
-### Result Analysis
-
-The powder samples exhibit different spectral reflectance
-characteristics in the SWIR region.
-
-Selecting informative wavelengths improves visual contrast
-between samples that are difficult to differentiate using
-conventional RGB imaging.
-
-The experiment demonstrates the potential of spectral band
-selection for material discrimination.
+- Visible imaging provides limited discrimination between
+  powders with similar visual appearances.
+- SWIR imaging reveals additional wavelength-dependent
+  reflectance features.
+- Informative wavelength selection enhances material contrast.
+- Selected spectral bands could support the development of
+  application-specific multispectral inspection systems.
 
 ### Potential Industrial Applications
 
-- Pharmaceutical material inspection
-- Powder identification
-- Chemical material discrimination
-- Non-destructive quality assessment
+- Pharmaceutical raw material inspection.
+- Powder and chemical material identification.
+- Detection of material inconsistencies.
+- Non-destructive pharmaceutical quality control.
+- Application-specific spectral sensor configuration.
 
----
+These results demonstrate laboratory-scale material
+discrimination rather than validated chemical identification.
 
 ## 4. Plastic Identification and Spectral Unmixing
 
