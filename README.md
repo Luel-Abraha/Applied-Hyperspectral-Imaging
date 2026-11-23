@@ -175,12 +175,12 @@ RGB-based identification.
 - Recycling and waste management.
 - Spectral machine vision.
 
-## 3. Medical Powder Identification 
+## 3. Medical Powder Identification
 
 ### Objective
 
 Investigate the spectral characteristics of different medical
-powder samples and identify informative wavelength combinations
+powder samples and identify optimal wavelength combinations
 for enhanced material discrimination using visible and
 short-wave infrared (SWIR) hyperspectral imaging.
 
@@ -194,9 +194,11 @@ analysis involved:
 
 - Extraction of visible and SWIR reflectance signatures.
 - Spectral smoothing and comparison of powder samples.
-- Identification of spectrally informative wavelength regions.
-- Automated evaluation of wavelength combinations.
-- Variance-based selection of false-colour RGB representations.
+- Identification of three informative SWIR spectral regions.
+- Automated evaluation of wavelength combinations by selecting
+  one wavelength from each spectral region.
+- Variance-based optimization of false-colour RGB representations
+  to enhance material contrast.
 
 ### Experimental Results
 
@@ -215,7 +217,7 @@ analysis involved:
   </tr>
   <tr>
     <th>SWIR Spectral Signatures</th>
-    <th>SWIR False-Colour Visualization</th>
+    <th>Optimized SWIR False-Colour Visualization</th>
   </tr>
   <tr>
     <td>
@@ -228,8 +230,8 @@ analysis involved:
   <tr>
     <td colspan="2" align="center">
       <b>Figure:</b> Comparison of visible and SWIR spectral
-      characteristics and wavelength-based enhancement of
-      medical powder samples.
+      characteristics and enhanced material discrimination
+      using optimized wavelengths of 1503, 2001 and 2393 nm.
     </td>
   </tr>
 </table>
@@ -242,9 +244,10 @@ The conventional RGB image shows several powder samples with
 similar white, cream and pale-yellow appearances, making their
 visual differentiation challenging.
 
-The visible reflectance curves reveal differences in spectral
-intensity and shape. However, several sample signatures overlap
-considerably, particularly at longer visible wavelengths.
+Although the visible reflectance curves exhibit differences
+in spectral intensity and shape, several sample signatures
+overlap considerably, limiting their visual discrimination
+using conventional RGB imaging.
 
 #### SWIR Spectral Region (1000–2500 nm)
 
@@ -255,56 +258,74 @@ Several samples exhibit pronounced reflectance minima around
 1200, 1450 and 1950 nm, while others maintain relatively high
 reflectance across broader wavelength intervals.
 
-These differences provide additional information for material
-discrimination that is less apparent in conventional visible
-imaging.
+Distinct reflectance profiles are also observed beyond 2200 nm.
+These wavelength-dependent characteristics provide additional
+information for distinguishing visually similar powder materials.
 
-#### Spectral Band Selection
+#### Optimal Spectral Band Selection
 
-The analysis investigated three informative SWIR regions:
+Based on the SWIR reflectance characteristics, three informative
+spectral regions were identified for wavelength optimization.
 
-| Spectral region | Wavelength range |
-|---|---|
-| Region 1 | 1450–1850 nm |
-| Region 2 | 2000–2200 nm |
-| Region 3 | Above 2200 nm |
+Different wavelength combinations were automatically evaluated
+by selecting one candidate wavelength from each spectral region.
+A variance-based optimization criterion was applied to identify
+the combination that maximized image contrast.
 
-Different wavelength combinations were evaluated to enhance
-the contrast between powder samples.
+The resulting optimal wavelength combination was:
 
-The displayed false-colour result uses the following
-wavelength combination:
+| RGB channel | Spectral region | Optimal wavelength |
+|---|---|---:|
+| Red | Band 1 (1450–1850 nm) | **1503 nm** |
+| Green | Band 2 (2000–2200 nm) | **2001 nm** |
+| Blue | Band 3 (>2200 nm) | **2393 nm** |
 
-| RGB channel | Selected wavelength |
-|---|---:|
-| Red | 1301 nm |
-| Green | 1900 nm |
-| Blue | 2102 nm |
+#### Optimized False-Colour Image Analysis
 
-The resulting SWIR visualization reveals distinct colour
-contrasts between powder regions that appear visually similar
-in the conventional RGB image.
+The optimized SWIR false-colour representation provides
+substantially clearer visual separation between powder samples
+than the conventional RGB image.
+
+Powder regions that previously appeared visually similar are
+represented by distinct red, green, brown, pink and cream
+colours, improving their visual discrimination.
+
+The result demonstrates that selecting informative wavelengths
+from complementary spectral regions can enhance material
+contrast without requiring the visualization of the entire
+hyperspectral cube.
+
+This approach also illustrates the potential of hyperspectral
+imaging for identifying application-specific wavelengths that
+could support the development of targeted multispectral
+inspection systems.
 
 ### Key Findings
 
-- Visible imaging provides limited discrimination between
-  powders with similar visual appearances.
-- SWIR imaging reveals additional wavelength-dependent
-  reflectance features.
-- Informative wavelength selection enhances material contrast.
-- Selected spectral bands could support the development of
-  application-specific multispectral inspection systems.
+- Conventional RGB imaging provides limited visual discrimination
+  between powders with similar appearances.
+- SWIR imaging reveals additional material-specific reflectance
+  characteristics.
+- Variance-based wavelength optimization identifies informative
+  spectral combinations for enhanced visualization.
+- The selected wavelengths of 1503, 2001 and 2393 nm provide
+  clearer visual separation between powder regions.
+- Hyperspectral analysis can support application-specific
+  multispectral sensor configuration.
 
 ### Potential Industrial Applications
 
 - Pharmaceutical raw material inspection.
-- Powder and chemical material identification.
+- Powder and chemical material discrimination.
 - Detection of material inconsistencies.
 - Non-destructive pharmaceutical quality control.
-- Application-specific spectral sensor configuration.
+- Application-specific spectral band optimization.
+- Development of targeted multispectral inspection systems.
 
-These results demonstrate laboratory-scale material
-discrimination rather than validated chemical identification.
+**Experimental scope:** These results demonstrate laboratory-scale
+spectral material discrimination and wavelength optimization
+rather than independently validated chemical identification
+or quantitative classification accuracy.
 
 ## 4. Plastic Identification and Spectral Unmixing
 
