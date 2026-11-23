@@ -224,7 +224,7 @@ analysis involved:
       <img src="result/medical%20powder/SWIRspectrum.png" width="450">
     </td>
     <td>
-      <img src="result/medical%20powder/SWIRresult.png" width="450">
+      <img src="result/medical%20powder/SWIRresult2.png" width="450">
     </td>
   </tr>
   <tr>
