@@ -49,7 +49,7 @@ spectral signatures similar to the reference spectrum.
 
 PCA, band selection and K-means clustering were also evaluated.
 
-### 1.1 Visible-Range Scanner
+### 1.1 Visible and near infrared-Range Scanner
 
 <table>
 <tr>
@@ -75,31 +75,6 @@ features across the visible and near-infrared wavelengths.
 SAM isolates the selected material based on spectral similarity
 rather than conventional RGB colour information.
 
-### 1.2 Infrared Scanner
-
-The infrared hyperspectral measurements provide additional
-spectral information beyond conventional visible imaging.
-
-The segmented material is highlighted in yellow to improve
-visual interpretation.
-
-<!-- Insert infrared scanner images here -->
-
-### 1.3 Specim IQ
-
-Hyperspectral measurements from the Specim IQ camera were
-analysed using reference spectrum extraction and SAM-based
-material segmentation.
-
-<!-- Insert Specim IQ images here -->
-
-### 1.4 Tunable Spectral Imaging
-
-Spectral measurements obtained using a tunable LED illumination
-system were evaluated for reference-based material identification.
-
-<!-- Insert tunable imaging results here -->
-
 ### Potential Industrial Applications
 
 - Material identification
@@ -114,47 +89,91 @@ system were evaluated for reference-based material identification.
 
 ### Objective
 
-Investigate spectral differences between plastic leaf and
-stem components using infrared hyperspectral measurements.
+Investigate the spectral differences between plastic leaf and
+stem components using infrared hyperspectral imaging and
+spectral segmentation techniques.
 
-### Methodology
+### Imaging System and Methodology
 
-Three spectral segmentation methods were evaluated using
-white and dark corrected infrared reflectance data:
+- Specim infrared hyperspectral scanner.
+- White and dark reference correction.
+- Reference material selection and spectral extraction.
+- Spectral Angle Mapper (SAM).
+- Principal Component Analysis (PCA).
+- K-means clustering.
 
-- Spectral Angle Mapper (SAM)
-- Principal Component Analysis (PCA)
-- K-means clustering
+### Experimental Results
 
-SAM compares each pixel spectrum against a selected reference.
-PCA reduces spectral dimensionality, while K-means groups
-spectrally similar pixels without predefined reference spectra.
+<table>
+  <tr>
+    <th>Reference Material Selection</th>
+    <th>Spectral Reflectance</th>
+    <th>Segmentation Result</th>
+  </tr>
+  <tr>
+    <td>
+      <img src="result/leaf%20segmentation/RGBleafmaterial.png" width="300">
+    </td>
+    <td>
+      <img src="result/leaf%20segmentation/spectrumleafmaterial.png" width="300">
+    </td>
+    <td>
+      <img src="result/leaf%20segmentation/resultleafmaterial.png" width="300">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+      <b>Figure 1:</b> Plastic stem segmentation using Spectral Angle Mapper (SAM).
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="result/leaf%20segmentation/RGBleafmaterial2.png" width="300">
+    </td>
+    <td>
+      <img src="result/leaf%20segmentation/spectrumleafmaterial2.png" width="300">
+    </td>
+    <td>
+      <img src="result/leaf%20segmentation/resultleafmaterial2.png" width="300">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+      <b>Figure 2:</b> Plastic leaf segmentation using K-means clustering.
+    </td>
+  </tr>
+</table>
 
-### Results
+### Spectral Analysis and Results
 
-<!-- Insert reference image and extracted spectrum -->
+The extracted infrared reflectance spectra reveal distinct
+spectral characteristics between the plastic leaf and stem
+materials across approximately 900–2500 nm.
 
-<!-- Insert SAM, PCA and K-means segmentation results -->
+The stem reference spectrum exhibits pronounced reflectance
+minima around 1200, 1400 and 1730 nm, while the leaf reference
+spectrum exhibits a different reflectance profile, including
+a substantial decrease beyond approximately 2200 nm.
 
-<!-- Insert separate stem segmentation result -->
+These spectral differences provide useful information for
+distinguishing the two material components.
 
-### Result Analysis
+Spectral Angle Mapper (SAM) selectively highlights the stem
+components based on spectral similarity to the reference
+signature, whereas K-means clustering identifies predominantly
+leaf regions through unsupervised spectral grouping.
 
-All three methods produced broadly similar object-level
-segmentation results.
-
-However, SAM provided clearer discrimination between
-the plastic leaf and stem components in this experiment
-because of its sensitivity to spectral shape differences.
+The results demonstrate the potential of infrared hyperspectral
+imaging to discriminate material components beyond conventional
+RGB-based identification.
 
 ### Potential Industrial Applications
 
-- Component identification
-- Material discrimination
-- Automated inspection
-- Spectral sorting
-
----
+- Plastic material identification and sorting.
+- Automated component inspection.
+- Industrial quality control.
+- Recycling and waste management.
+- Spectral machine vision.
 
 ## 3. Medical Powder Analysis
 
