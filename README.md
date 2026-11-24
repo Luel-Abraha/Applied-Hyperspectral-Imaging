@@ -668,13 +668,6 @@ spectral differences.
 - Pixel-wise spectral classification
 - Hyperspectral image segmentation
 
-## Source Code
-
-The complete Jupyter notebook contains the Python
-implementations and experimental outputs.
-
-[Complete Advanced Spectral Imaging Notebook](ASI_homework2.ipynb)
-
 ## Experimental Scope
 
 These projects demonstrate laboratory-scale spectral imaging
@@ -688,4 +681,3 @@ potential use cases rather than commercially validated systems.
 MSc in Computational Colour and Spectral Imaging
 (Erasmus Mundus)
 
-MSc in Computer Engineering
